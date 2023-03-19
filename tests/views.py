@@ -8,6 +8,6 @@ def index(request):
 def scanning_page(request):
     if request.method =="POST":
         matricule = request.POST.get('matricule')
-        messages.error(request, f"La donnée extraite du code qr {matricule}")
+        messages.success(request, f"La donnée extraite du code qr {matricule}")
         return redirect('scanning_page')
     return render(request, 'test_cam/scanning_page.html')
